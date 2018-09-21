@@ -1,0 +1,90 @@
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+
+\usepackage{todonotes}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{paralist}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{cleveref}
+
+\modulolinenumbers[5]
+\renewcommand\theadalign{rb}
+\newcolumntype{R}[1]{>{\tiny\raggedleft\arraybackslash}b{#1}}
+
+% Comment the following for final version
+\setlength{\marginparwidth}{4cm} % expand note margin
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\journal{Journal of \LaTeX\ Templates}
+\bibliographystyle{elsarticle-num}
+
+\newcommand{\trademark}{{\tiny\textsuperscript\textregistered}}
+
+\input{commands}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{DEPRECATED. Please follow link in abstract to the correct overleaf project.}
+
+        \author[tug]{G.~Schweiger}
+        \author[ant]{C.~Gomes }
+        \author[tug]{G.~Engel}
+        \author[dwh]{I.~Hafner}
+        \author[swe]{J.~Schoeggl}
+        \author[kfu]{A. Posch}
+        \author[lbnl]{T.~Nouidui \corref{cor1}}
+
+        \address[tug]{Technical University of Graz, Austria}
+        \address[ant]{University of Antwerp, Antwerp, Belgium}
+        \address[dwh]{dwh GmbH - Simulation Services and Technical Solutions, Vienna, Austria}
+        \address[swe]{KTH Royal Institute of Technology, Stockholm, Sweden}
+        \address[kfu]{University of Graz, Austria}
+        \address[lbnl]{Lawrence Berkeley National Laboratory, Berkeley, USA}
+
+
+        \cortext[cor1]{Corresponding author. yyy
+        000, 000 Berkeley, USA. Tel.: +xxxxxx \textit{E-mail address}: tsnouidui@lbl.gov}
+
+\begin{abstract}
+
+{
+\url{https://v2.overleaf.com/5389137161csybdfnnjtmg}
+}
+
+
+\end{abstract}
+
+\begin{keyword}
+Co-Simulation \sep Survey \sep Delphi Method
+\end{keyword}
+
+\end{frontmatter}
+
+%\linenumbers
+
+\input{chapter/Introduction}
+
+\claudio{I think we need a background section. This is a journal paper: it should be somewhat self contained. A basic requirement is: the readers should be able to understand the questions being asked. I can prepare a draft background section if you want, or we can reuse what we already have from previous papers, and expand it.}
+
+\input{chapter/Method}
+\input{chapter/ResultsDiscussion}
+\input{chapter/Conclusion}
+
+
+\section*{Acknowledgement}
+We want to thank all experts who participated in the study. 
+\section{References}
+
+\bibliography{Literature,Mendeley,mendeley_v2,bib_claudio}
+
+\input{chapter/Appendix}
+\newpage
+\end{document}

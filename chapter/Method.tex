@@ -1,0 +1,195 @@
+\section{Method and Rationale}
+
+In this section, we provide an introduction of the method, and detail how it was implemented through this work. 
+Furthermore, we describe how we selected the experts to be interviewed, and how their replies were handled.
+As a methodological foundation of this study, the Delphi method \cite{Dalkey1963} was adopted. 
+Additionally, a quantitative analysis of the strengths, weaknesses, opportunities and threats (SWOT) of co-simulation utilizing the Analytic Hierarchy Process (AHP) has been conducted.
+
+% \claudioi{In this section, we provide an introduction of the method, and detail how it was implemented through this work. 
+% We describe how we selected the experts to be interviewed, and how their replies were handled. Etc. (Provide an overview of the structure of this section, so that the reader knows what to expert from each subsection.)}
+
+
+%\claudio{Maybe this table, and corresponding description, should be moved to the end of the section, as a recap? It currently does not really summarize this section: only the delphi method. For example, it is missing the expert selection procedure.
+%If we want to keep it here (and I think that's a great idea, to provide the reader with a map of the section), then I suggest we prepend a few more lines to the table, describing the steps we took to select the experts. We can even add a reference to the subsection where each step is detailed.}
+
+\subsection{Delphi Method}
+
+The Delphi method is a forecasting technique that builds on the collection and compilation of knowledge from a selected group of experts \cite{Dalkey1963,Hsu2007}. It fosters the exploration of problems that are characterized by an incomplete state of knowledge\cite{Powell2003}, a lack historical data or a lack of agreement found within the studied field \cite{Okoli2004a}. 
+The aim of applying the Delphi method is to arrive at a reliable consensus of opinion by means of a repetitive assessment process with controlled opinion feedback \cite{Landeta2006}. 
+As a formal consensus methodology, the Delphi method provides structured circumstances that ''[\ldots] can generate a closer approximation of the objective truth than would be achieved through conventional, less formal, and pooling of expert opinion''  \cite{Balasubramanian2012}. 
+We considered the Delphi method because it is particularly useful for solving interdisciplinary research problems, where the opinions of experts are heterogeneous.
+The survey consist of two rounds. The choice of rounds is justified by, for instance, Sommerville, which argues that the changes in the participants’ views in most cases occurred in the first two rounds of the study and not many new insights are gained on further rounds \cite{Sommerville2008}.
+The quality of the Delphi process depends on the factors of creativity, credibility and objectivity \cite{Nowack2011} and to address these quality criteria we followed acknowledged guidelines by authors such as \cite{Landeta2006,Nowack2011,Okoli2004a}.
+
+Relevant questions in the first round were selected based on existing studies on co-simulation (see section \ref{Sota}) and the experience of the authors.
+Both rounds included both open-ended (qualitative) and quantitative questions.
+In the first round, the majority of questions was qualitative, whereas in the second, quantitative. 
+This ensures that the topic is introduced in a general way in the first round. 
+If the first round consisted only of quantitative questions, there would be an increased risk of overlooking important factors or biasing the results. 
+The qualitative questions in the first round concerned only with findings that were common across the survey papers referred above. 
+In these cases, expert opinions were used to evaluate findings in previous surveys and to enable quantitative statements and comparisons. 
+The quantitative questions in the second round were mainly formulated based on the results of the first round and the findings in recent literature (e.g. when contradictions were identified).
+
+
+
+%(e.g. compliance bias \claudio{Is there a citation where the term "compliance bias" is explained? Here it is mentioned but there is no reference to were the reader can look for it? A google search goes to a medical dictionary... If no reference is there, then I suggest just removing the example. The explanation is pretty clear and intuitive.}).
+
+%In the first round, for example, experts were asked to name the main journals and conferences for co-simulation, or research fields that have not received enough attention up to now. These answers in combination with insights from the literature were the basis for designing quantitative questions for the second round. We also included an open question in each block of questions, asking experts whether they would consider any other factors than the ones we had chosen as being important; this approach ensures that...
+%\claudio{I don't think we need this paragraph, but the other ones are really nice to give a sense of what the method is about to the reader.}.
+
+%\gerald{Sepp, is that OK: we describe the result of the Delphi: (i) the SWOT AHP of co-sim (ii) established standards and tools, (iii) current challenges and (iv) research needs. The method for (i) is described in detail below. (ii)-(iv) are based on ?? .. I would say qualitative based on Meyring und quantitative based on Likert scale...? }
+%\gerald{Sepp, is that OK: A main result of the Delphi Study is the SWOT-AHP assessment, which is outlined in the following section}
+
+
+\subsection{SWOT-AHP}
+%\gerald{@Sepp: copied from Posch -- change + add citations}
+%\claudio{I've summarized/rephrased a bit of what was written. Still missing the citations though.}
+A SWOT analysis is an analytical technique used to analyze the internal strengths and weaknesses as well as the external opportunities and threats of a project, product, person, etc. \cite{Kotler2016TheManagement}.
+%However, a SWOT analysis is merely a qualitative analysis. While it may be used to pinpoint specific factors, it does not provide information on the relative importance of these factors; there is no prioritizing or weighting of the selected factors in terms of their relative importance. 
+While the analysis may be used to pinpoint specific factors, there is no prioritizing or weighting of the selected factors in terms of their relative importance.
+In practice, this complicates strategy development and means that the strategic planning process strongly depends on the individual judgments of the people involved. 
+
+To overcome this, we implemented a second step in our analysis, namely an integrated SWOT-AHP analysis. The goal of this method is to get a better understanding of the relative importance of each factor. 
+Therefore, experts were asked to make a pairwise comparison and weighting of the respective factors in each category as well as a comparison of the categories based on a 9 point scale. 
+Saaty \cite{Saaty1980} has developed the AHP method that is based on the eigenvalue method. 
+The goal is to synthesize a pairwise comparison matrix and to get a priority for each factor in a group. 
+In a first step, the relative priority of each factor in each group was calculated based on the results of the pairwise comparisons. The result is the ''local factor priority''. 
+In a second step, the ''group priority'' was calculated based on the results of how experts assessed the priority of the individual groups. 
+In a third step, the ''global factor priority'' of the respective factors was calculated by multiplying the local factor priority by the respective group priority. 
+Details about the AHP method can be found in \cite{Saaty1980}.
+
+In the first round of the Delphi study, we conducted a standard SWOT analysis. Relevant factors in the first round were selected based on an extensive literature study (see section \ref{Sota}) and the experience of the authors. Experts were asked to select the three factors for each category that they value as most important. 
+To help validate the selected SWOT factors, an open-format question in each SWOT section was included, asking experts whether they consider any other factors than the ones we had chosen as being more important. 
+Based on these results, we selected the three most important factors per category for the second round, where experts conducted the SWOT-AHP doing a pair-wise comparison of all factors. 
+
+%\gerald{partly from Posch}
+%In the questionnaire, the experts were asked to undertake a pair-wise comparison of all factors in the same SWOT field, i.e. to state which factor for each pair is more important, and how much more important. Finally, the experts were asked to do the same with the four SWOT fields themselves, always bearing in mind the four factors in each field. For all the comparisons, we applied the nine step scale suggested by Saaty (1986) which ranges from 9:1 (meaning that ‘factor a is much more important than factor b’) to 1:9 (meaning that ‘factor b is much more important than factor a’), deliberately leaving out the even numbers as intermediate steps. The center of the scale was thus 1:1, a position indicating that the respective factors were considered to be of equal importance.
+
+%Since we had three factors in each SWOT field, the respondents were asked to make xx pairwise comparisons in total, xxx for each of the four SWOT fields, and another xxx for the comparisons of the SWOT fields with each other. Each pairwise comparison followed the logic presented in xxx 
+
+%\gerald{@Sepp: Possibly shorten (just main equations for AHP) INtro do AHP - change (Posch change we have 3 not 4}
+%\claudio{I agree that this should be shorten. In fact, we should avoid anything too technical: the readers of this might be people from industry, and these might have trouble with the concepts (and not be willing to dive deeper), and could be driven away.
+%The question is: can the reader understand the main results without understanding the AHP analysis?
+%If so, a reference should be included where all these equations are given an explained, and an intuitive explanation (if overly simplistic, then we just say that we are being very rough in the explanation, and refer the reader to the intro for more details).}
+
+%\begin{equation}\label{eq:AHP1}
+%    w(a)_i/w(b)_i= 
+%\begin{cases}
+%    a_i > b_i, w(a)_i/w(b)_i \in {3/1, 5/1, 7/1, 9/1}\\
+%    a_i \approx b_1, w(a)_i/w(b)_i =1 \\
+%    a_i < b_i, w(a)_i/w(b)_i \in {1/3, 1/5, 1/7, 1/9}
+%\end{cases}
+%\end{equation}
+
+%We then calculated the average figure for the results of all pairwise comparisons. Here, we normalized the average scores of each comparison between two factors so that the less important factor always received a score of $1$, and the more important factor a score within the possible range from $1$ to $9$. The next equation shows the process again for the scores resulting from the comparisons between factor $a$ and factor $b$ by all $n$ respondents:
+
+%\begin{equation}\label{eq:AHP2}
+%    w(a)/w(b)= 
+%\begin{cases}
+%    \sum_{i=1}^n w(a)_i > \sum_{i=1}^n w(b)_i, \frac{w_a}{w_b}=\frac{\sum_{i=1}^n w(a)_i}{\sum_{i=1}^n w(b)_i}\\
+%    \sum_{i=1}^n w(a)_i = \sum_{i=1}^n w(b)_i, \frac{w_a}{w_b}=1 \\
+%    \sum_{i=1}^n w(a)_i < \sum_{i=1}^n w(b)_i, \frac{w_a}{w_b}=(\frac{\sum_{i=1}^n w(a)_i}{\sum_{i=1}^n w(b)_i})^{-1}
+%\end{cases}
+%\end{equation}
+
+%Note that $w_b/w_a$ is always the reciprocal value of $w_a/w_b$ . The calculated values and the corresponding reciprocal values then form the elements of three judgment matrices: one matrix for each SW factor group, plus the matrix for the overall pairwise comparisons across the groups. Each matrix consists of four rows and four columns, for the four factors $a$,$b$,$c$,$d$.
+
+%\begin{equation}\label{eq:AHP3}
+%A = \begin{bmatrix} 
+ %   1 & \dots & \ w_a/w_d \\
+ %   \vdots & \ddots & \vdots\\
+%    \frac{1}{w_a/w_d} &\dots  & 1 
+ %   \end{bmatrix}
+%\end{equation}
+
+%In order to calculate the relative priorities of the factors, we applied the eigenvalue method. An eigenvalue is the scalar $\lambda$ associated with an eigenvector , whereas the eigenvector of the square matrix $A$ is a vector $\nu$  such that \claudio{The vector must be non null, and I think there are more details about this. Also add a ref to a linear algebra book, such as \cite{Strang1993}.}:
+
+%\begin{equation}\label{eq:AHP4}
+%A \times \nu = \lambda \nu
+%\end{equation}
+
+%In the (realistic) case that $A$ contains inconsistencies, priorities can be obtained by using the matrix $A$ as input in the following equation:
+%\begin{equation}\label{eq:AHP5}
+%(A - \lambda_{max} I)\nu = 0
+%\end{equation}
+
+%Where $\lambda_{max}$ is the principal eigenvalue of matrix $A$,$\nu$ is the correct eigenfactor and $I$ is the identity matrix. The principal eigenvalue is calculated by summing each column of the judgment matrix, multiplying the sums by their corresponding eigenfactor, and adding up the products. In order to calculate the eigenfactor $\nu$, which constitutes an estimation of the relative weighting of the respective factors, we squared the judgment matrices, calculated the sums for each row, and normalized the sums in order to get the principal eigenvectors of the matrices. This procedure was repeated until the difference between the calculated eigenvectors of each matrix became marginal. In our case, one repetition sufficed in order to reach a maximum difference with an absolute value smaller than $0.001$.
+%As a next step, we calculated the consistency index ($CI$) and the consistency ratio ($CR$) for each judgment matrix according to the following equations:
+
+%\begin{equation}\label{eq:AHP6}
+%CI= (\lambda_{max} -n)/(n-1)
+%\end{equation}
+
+%\begin{equation}\label{eq:AHP7}
+%CR=100(CI/ACI
+%\end{equation}
+
+%here, $n$ is the number of factors (and equals the number of rows and columns of the matrix) and $\lambda_{max}$ is the principal eigenvalue. The principal eigenvalue is calculated by summing each column of the judgment matrix, multiplying the sums by their corresponding eigenfactor, and adding up the products \cite{Saaty1999}. To arrive at index values which are independent of matrix size, $CI$ values need to be converted into $CR$ values. This is done by making use of the average consistency index ($ACI$) of randomly generated comparisons. According to \cite{Saaty1999} the $ACI$ for a $4-order$ judgment matrix with the scale described above is $0.89$; and as a rule of thumb, the value of the $CR$ should be $10$ percent or less. Higher values indicate inconsistent judgments and thus should be revised. To calculate the overall weighting factors (global priorities) we multiplied the weighting factor of each factor within a SW group (local priority) by the value of the corresponding weighting factor for the whole SW group \cite{Kurttila2000}. The sum of all overall weighting factors is one.
+
+\subsection{Expert selection}
+\label{sec:expert_selection}
+The Delphi method does not prescribe any particular way of selecting experts.
+As such we used a Knowledge Resource Nomination Worksheet (KRNW) as a framework \cite{Okoli2004a}. 
+The KRNW was proposed in \cite{Delbecq1975} as general criterion for sampling an expert panel by classifying the experts before selecting them, in two iterations, as a way to avoid overlooking any important class of experts.
+It consists of the following five steps, detailed below:
+\begin{inparaenum}[(1)]
+\item \label{step:KRNW1} Preparation of the KRNW;
+\item \label{step:KRNW2} Population of the KRNW;
+\item \label{step:KRNW3} Nomination of additional experts;
+\item \label{step:KRNW4} Ranking of experts; and 
+\item \label{step:KRNW5} Invitation of experts.
+\end{inparaenum}
+
+\newcommand{\KRNW}[1]{Step~(\ref{step:KRNW#1})}
+
+In \KRNW{1}, we classified the experts according to whether they work in \emph{academia} or \emph{industry}, as both perspectives are essential. 
+Then, in \KRNW{2}, the \emph{academia} category was populated based on a keyword-based search in literature on the state of the art in co-simulation (see section \ref{Sota}); the \emph{industry} category was populated based on the same keyword-based search and the experience of the authors.
+Afterwards, in \KRNW{3}, both categories were expanded \claudio{Does this mean that more experts were added to each category? If so, say so.} based on the suggestions received after contacting the initial list of experts.
+In \KRNW{4}, the ranking of experts was done using the number of publications in the field of co-simulation, obtained from Scopus\trademark \footnote{\url{www.scopus.com}}.
+%\claudio{Can we be more specific on the selection of experts? Did we used the h-index? If so, wee did we get it? And why did we rank them? Did we have a limit to how many experts we could contact? How do we consider a person to be an expert?}
+In \KRNW{5} the final list of experts were invited to take part in the Delphi study. 
+15 experts were contacted for the first round; after receiving a final reminder by email, 12 completed questionnaires were returned. The response rate for the first round was thus 80 \%.
+In the second round, we contacted 70 persons; after receiving a final reminder by email, 53 completed questionnaires were returned. The response rate for the second round was thus 76 \%.
+We can therefore safely state that a significant share of representatives from co-simulation experts were involved in the analysis.
+
+Experts from industry, who took part in the survey, work in the following sectors: Energy Systems: 5, Software development: 7, Mobility: 4, Engineering services: 1, system engineering:1, Avionics, Railways: 1.
+Experts from academia who took part in the survey work in the following fields: Energy related applications: 8, Software development: 6,  Automotive: 3, Computer Science: 2, Maritime: 1,  System Engineering:1, Numerical mathematics: 1, System modelling and verification: 1, formal methods:1.
+Some experts did not provide information about their field or sector.
+
+Regarding the number of experts, Clayton \cite{Clayton1997} indicated that 15-30 experts with homogeneous expertise background or five to ten experts with heterogeneous background should be involved in a Delphi process, while Adler and Ziglio \cite{Adler1996} argued that for a homogeneous expertise background, 10-15 experts are already considered to be appropriate. 
+
+\Cref{tab:rounds} summarizes the aim and approach of each round and provides the number of participants per category. 
+\begin{table}[h]
+\centering
+\tiny
+\caption{Summary of method.}
+\label{tab:rounds}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lp{10em}lllll}
+      &                                                                                                                                                                                            &                   & \multicolumn{4}{c}{Participants} \\ \cline{4-7} 
+Round & Aim                                                                                                                                                                                        & Approach          & A     & I     & ND    & Total    \\ \hline
+1     & Identification of research needs, SWOT factors, limitations and possible extension.                                                              & Qualitative       & 7     & 2     & 3     & 12       \\
+2     & Evaluation of the result from the first round and development of in-depth discussions on the key aspects. Test on convergence the identified factors, themes and scenarios  & \makecell{Semi- \\ quantitative}. & 24    & 19    & 10    &    53      \\
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Presentation of the results}
+A content analysis following Mayring was used to analyze the qualitative answers \cite{Mayring2004}.
+There is controversial discussion in the scientific literature about suitable statistical measures for interpreting results of a survey used Likert-scales. 
+Hallowell and  Gambatese \cite{Hallowell2010} argue that results should be reported in terms of the median rather than the mean because the median response is less likely to be affected by biased responses. 
+Sachs \cite{Sachs1997} argues that the interpolated median is more precise than the normal medians because of better consideration of frequencies of answers within one category in comparison to all answers. 
+In order to provide a transparent presentation of the results, (i) in the appendix, all results are displayed in detail in a bar chart and (ii) in Section 3, all results are discussed using Mean, Median and Interpolated Median values.
+If remarkable agreement among the experts are identified, or differences between the included groups of experts are identified, this will pointed that out separately.
+
+
+\subsection{Threats to validity and limitations of the study}
+Detailed discussion about the threats to validity in Delphi studies can be found in \cite{Hasson2000}.
+The ranking of experts from academia was done based on the number of publications on Scopus\trademark.
+There is an ongoing discussion on how to compare the scientific impact among researchers; while some indices are well suited for comparing researchers within the same field, this is not the case for comparing different fields. Since co-simulation is an interdisciplinary field of research, the selection of experts in this work can be seen as a limitation. 
+
+\gerald{add insights from the discussion}
+
+
+
+

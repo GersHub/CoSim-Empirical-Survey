@@ -1,0 +1,55 @@
+% Flag that controls the display of comments.
+\newif\ifcomments
+
+% Enable/Disable comments.
+\commentstrue
+% \commentsfalse
+
+\newcommand{\claudio}[1]{%
+\ifcomments %
+\textbf{\textcolor{red}{\scriptsize Claudio: #1}} %
+\else %
+ %
+\fi%
+}%
+
+\newcommand{\gerald}[1]{%
+\ifcomments %
+\textbf{\textcolor{blue}{\scriptsize Gerald: #1}} %
+\else %
+ %
+\fi%
+}%
+
+\newcommand{\sepp}[1]{%
+\ifcomments %
+\textbf{\textcolor{green}{\scriptsize Sepp: #1}} %
+\else %
+ %
+\fi%
+}%
+
+\newcommand{\georg}[1]{%
+\ifcomments %
+\textbf{\textcolor{yellow}{\scriptsize Georg: #1}} %
+\else %
+ %
+\fi%
+}%
+
+\newcommand{\irene}[1]{%
+\ifcomments %
+\textbf{\textcolor{black}{\scriptsize Irene: #1}} %
+\else %
+ %
+\fi%
+}%
+
+
+\newcommand{\thierry}[1]{%
+\ifcomments %
+\textbf{\textcolor{green}{\scriptsize Thierry: #1}} %
+\else %
+ %
+\fi%
+}%
